@@ -9,8 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-
-namespace GYArbete2014KarlaxelEliasTE12C
+namespace Animation
 {
     /// <summary>
     /// This is the main type for your game
@@ -24,9 +23,6 @@ namespace GYArbete2014KarlaxelEliasTE12C
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 768;
-            graphics.PreferredBackBufferWidth = 1366;
-
         }
 
         /// <summary>
@@ -38,8 +34,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            
-             
+
             base.Initialize();
         }
 
@@ -51,7 +46,6 @@ namespace GYArbete2014KarlaxelEliasTE12C
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           // Tennisboll.T = Content.Load<Texture2D>("Paddeltextur_Slutprojekt");
 
             // TODO: use this.Content to load your game content here
         }

@@ -1,0 +1,4 @@
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\Uppgift77\Uppgift77\bin\Debug\Uppgift77.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\Uppgift77\Uppgift77\bin\Debug\Uppgift77.pdb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\Uppgift77\Uppgift77\obj\x86\Debug\Uppgift77.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\Uppgift77\Uppgift77\obj\x86\Debug\Uppgift77.pdb
