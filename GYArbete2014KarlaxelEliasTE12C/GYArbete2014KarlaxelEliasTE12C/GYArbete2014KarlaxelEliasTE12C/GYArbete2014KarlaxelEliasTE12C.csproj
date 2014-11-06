@@ -117,7 +117,6 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
-    <Content Include="gytest.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GYArbete2014KarlaxelEliasTE12CContent\GYArbete2014KarlaxelEliasTE12CContent.contentproj">

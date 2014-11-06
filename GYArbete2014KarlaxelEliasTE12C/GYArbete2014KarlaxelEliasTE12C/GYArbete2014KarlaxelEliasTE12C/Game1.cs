@@ -19,7 +19,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Point skullballFrameSize = new Point(75, 75);
+       // Point skullballFrameSize = new Point(75, 75);
        
         // texturer
         Texture2D Tennisboll;
@@ -61,8 +61,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
             // Create a new SpriteBatch, which can be used to draw textures.
             
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           
-            Basketboll boll = new Basketboll(100, 100, Content.Load<Texture2D>("gytest.png"));
+            basketboll = Content.Load<Texture2D>("gytest");
+            Basketboll boll = new Basketboll(200,200, basketboll);
             // TODO: use this.Content to load your game content here
         }
 
