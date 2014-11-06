@@ -19,6 +19,13 @@ namespace GYArbete2014KarlaxelEliasTE12C
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Point skullballFrameSize = new Point(75, 75);
+       
+        // texturer
+        Texture2D Tennisboll;
+        Texture2D basketboll;
+        Texture2D person1;
+        Texture2D person2;
 
         public Game1()
         {
@@ -49,12 +56,16 @@ namespace GYArbete2014KarlaxelEliasTE12C
         /// </summary>
         protected override void LoadContent()
         {
+        
+            
             // Create a new SpriteBatch, which can be used to draw textures.
+            
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           // Tennisboll.T = Content.Load<Texture2D>("Paddeltextur_Slutprojekt");
-
+           
+            Basketboll boll = new Basketboll(100, 100, Content.Load<Texture2D>("gytest.png"));
             // TODO: use this.Content to load your game content here
         }
+
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload

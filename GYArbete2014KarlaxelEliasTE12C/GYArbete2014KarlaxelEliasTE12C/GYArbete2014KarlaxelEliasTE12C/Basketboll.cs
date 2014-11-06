@@ -17,18 +17,24 @@ namespace GYArbete2014KarlaxelEliasTE12C
         public double radie = 7.0358;
         // källor där varibarna till det här föremålet kommer ifrån http://www.answers.com/Q/What_is_the_diameter_or_radius_of_a_basketball
 
-        public int basketBollPositionX;
-        public int basketBollPositionY;
+        public Vector2 basketBollPosition;
+      
         public Texture2D texturFörBasketBoll;
-
-
-        public Basketboll(int posX, int posY, Texture2D T)
+   
+        public Basketboll(Vector2 b, Texture2D T)
         {
-            basketBollPositionX = posX;
-            basketBollPositionY = posY;
+
+            basketBollPosition = b;
             texturFörBasketBoll = T;
 
         }
-    
+        
+        public void Draw(SpriteBatch spritebatch)
+        {
+            spritebatch.Draw(texturFörBasketBoll, basketBollPosition, Color.White);
+        }
+
+
+
     }
 }

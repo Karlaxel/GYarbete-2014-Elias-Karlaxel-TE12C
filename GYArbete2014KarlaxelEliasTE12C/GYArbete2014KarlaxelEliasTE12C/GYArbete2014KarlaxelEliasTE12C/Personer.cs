@@ -19,9 +19,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
         public int ålder;
         public double vinkelPåKast;
         public Texture2D texturFörPerson;
+        public int posx;
+        public int posy;
 
 
-        public Personer(double k, double mk, string i, int å, double v, Texture2D T)
+        public Personer(double k, double mk, string i, int å, double v, Texture2D T, int x, int y)
         {
             kraft = k;
             maxKraft = mk;
@@ -29,6 +31,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
             ålder = å;
             vinkelPåKast = v;
             texturFörPerson = T;
+            posx = x;
+            posy = y;
         }
        
         
