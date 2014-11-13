@@ -13,8 +13,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
 {
     class Personer
     {
-        public double kraft;
-        public double maxKraft;
+        public float hastighet;
+        
         public string info;
         public int ålder;
         public double vinkelPåKast;
@@ -23,10 +23,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
         public int posy;
 
 
-        public Personer(double k, double mk, string i, int å, double v, Texture2D T, int x, int y)
+        public Personer(float h, string i, int å, double v, Texture2D T, int x, int y)
         {
-            kraft = k;
-            maxKraft = mk;
+            hastighet = h;
             info = i;
             ålder = å;
             vinkelPåKast = v;

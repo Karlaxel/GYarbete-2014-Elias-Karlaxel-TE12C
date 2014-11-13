@@ -1,1 +1,2 @@
 Content\gytest.xnb
+Content\persontest.xnb

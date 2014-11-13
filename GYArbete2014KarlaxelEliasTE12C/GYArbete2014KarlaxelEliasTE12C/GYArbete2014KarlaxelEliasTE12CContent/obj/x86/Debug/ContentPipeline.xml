@@ -10,6 +10,15 @@
       <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\gytest.xnb</Output>
       <Time>2014-10-23T14:23:48.1942327+02:00</Time>
     </Item>
+    <Item>
+      <Source>persontest.png</Source>
+      <Name>persontest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\persontest.xnb</Output>
+      <Time>2014-11-13T14:42:19.0242707+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

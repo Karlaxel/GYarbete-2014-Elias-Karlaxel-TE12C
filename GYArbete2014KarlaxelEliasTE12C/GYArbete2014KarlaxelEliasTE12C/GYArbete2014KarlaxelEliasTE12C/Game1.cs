@@ -22,17 +22,20 @@ namespace GYArbete2014KarlaxelEliasTE12C
        // Point skullballFrameSize = new Point(75, 75);
        
         // texturer
-        Texture2D Tennisboll;
         Texture2D basketboll;
-        Texture2D person1;
-        Texture2D person2;
+        Texture2D texturFörPerson;
+        Basketboll boll;
+        public Vector2 posB = new Vector2(0, 650);
+        float tid = 0;
+        Personer person;
+        double vinkel;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 768;
-            graphics.PreferredBackBufferWidth = 1366;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferWidth = 1400;
 
         }
 
@@ -59,10 +62,10 @@ namespace GYArbete2014KarlaxelEliasTE12C
         
             
             // Create a new SpriteBatch, which can be used to draw textures.
-            
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            person = new Personer(75,"",18,45,Content.Load<Texture2D>("persontest") ,1,1);
+            spriteBatch = new SpriteBatch(GraphicsDevice); 
             basketboll = Content.Load<Texture2D>("gytest");
-            Basketboll boll = new Basketboll(200,200, basketboll);
+            boll = new Basketboll(posB, basketboll);
             // TODO: use this.Content to load your game content here
         }
 
@@ -86,8 +89,36 @@ namespace GYArbete2014KarlaxelEliasTE12C
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            tid += 0.1666667f;
             // TODO: Add your update logic here
+            boll.posB.X = person.hastighet * tid;
+            vinkel = Math.Sin(person.vinkelPåKast);
+            
+            boll.posB.Y = (float)(650f - person.hastighet * vinkel * tid + 0.5f * 9.82f * tid * tid);
+
+
+            
+
+            if (boll.posB.Y > 700f)
+            {
+                boll.posB.Y = 650f;
+                boll.posB.X = 0;
+            }
+
+            
+            
+            KeyboardState KeyboardState = Keyboard.GetState();
+            if (boll.posB.X == 0)
+            {
+                if (KeyboardState.IsKeyDown(Keys.Left))
+                    person.hastighet -= 1;
+                if (KeyboardState.IsKeyDown(Keys.Right))
+                    person.hastighet += 1;
+                if (KeyboardState.IsKeyDown(Keys.Up))
+                    person.vinkelPåKast += 1;
+                if (KeyboardState.IsKeyDown(Keys.Down))
+                    person.vinkelPåKast -= 1;
+            }
 
             base.Update(gameTime);
         }
@@ -101,8 +132,14 @@ namespace GYArbete2014KarlaxelEliasTE12C
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            boll.Draw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
+   
+    
+    
     }
 }
