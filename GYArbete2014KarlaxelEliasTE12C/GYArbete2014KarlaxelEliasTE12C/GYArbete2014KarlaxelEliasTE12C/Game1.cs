@@ -29,6 +29,12 @@ namespace GYArbete2014KarlaxelEliasTE12C
         float tid = 0;
         Personer person;
         double vinkel;
+        SpriteFont Fysikformel;
+        public int counter;
+
+
+        //postioner för spritefronts 
+        Vector2 FysikformelPos;
 
         public Game1()
         {
@@ -62,10 +68,19 @@ namespace GYArbete2014KarlaxelEliasTE12C
         
             
             // Create a new SpriteBatch, which can be used to draw textures.
+            // person blir instanserad
             person = new Personer(75,"",18,45,Content.Load<Texture2D>("persontest") ,1,1);
+            
             spriteBatch = new SpriteBatch(GraphicsDevice); 
+            
+            // boll blir instanserad
             basketboll = Content.Load<Texture2D>("gytest");
             boll = new Basketboll(posB, basketboll);
+           
+            // spritefont blir instanserade 
+            Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
+            FysikformelPos.X = 550;
+            FysikformelPos.Y = 700;
             // TODO: use this.Content to load your game content here
         }
 
@@ -89,15 +104,31 @@ namespace GYArbete2014KarlaxelEliasTE12C
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            tid += 0.1666667f;
+           
             // TODO: Add your update logic here
-            boll.posB.X = person.hastighet * tid;
+            
             vinkel = Math.Sin(person.vinkelPåKast);
-            
-            boll.posB.Y = (float)(650f - person.hastighet * vinkel * tid + 0.5f * 9.82f * tid * tid);
+            KeyboardState KeyboardState = Keyboard.GetState();
 
-
+             if (KeyboardState.IsKeyDown(Keys.Enter))
+                counter++; 
             
+            
+            if (counter % 2 == 1)
+            {
+                boll.posB.Y = (float)(650f - person.hastighet * vinkel * tid + 0.5f * 9.82f * tid * tid);
+                tid += 0.01666667f;
+                boll.posB.X = person.hastighet * tid;
+            }
+
+            if (person.vinkelPåKast < 20 || person.vinkelPåKast > 180)
+            {
+                if (person.vinkelPåKast < 20)
+                    person.vinkelPåKast = 20;
+          else if (person.vinkelPåKast > 180)
+                    person.vinkelPåKast = 180;
+            }
+
 
             if (boll.posB.Y > 700f)
             {
@@ -107,7 +138,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
 
             
             
-            KeyboardState KeyboardState = Keyboard.GetState();
+           
             if (boll.posB.X == 0)
             {
                 if (KeyboardState.IsKeyDown(Keys.Left))
@@ -120,6 +151,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.vinkelPåKast -= 1;
             }
 
+
+            // ritar ut fonts 
+           // spriteBatch.DrawString(Fysikformel,"hej", FysikformelPos, Color.Green);
+            //person.vinkelPåKast.ToString()
+            
             base.Update(gameTime);
         }
 
@@ -132,8 +168,19 @@ namespace GYArbete2014KarlaxelEliasTE12C
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+
+
+            // ritar ut fonts 
+            //spriteBatch.DrawString(Fysikformel, "hej", FysikformelPos, Color.Green);
+            //person.vinkelPåKast.ToString()
+            
             spriteBatch.Begin();
             boll.Draw(spriteBatch);
+        
+            spriteBatch.DrawString(Fysikformel,"hojden =_" + "Hastighet" + "_" + person.hastighet + "*" + "sin"  + person.vinkelPåKast.ToString() + "-" + "0,50 * 9.82" + "*" + tid.ToString() , FysikformelPos, Color.Green);
+         
+            
+            
             spriteBatch.End();
 
             base.Draw(gameTime);

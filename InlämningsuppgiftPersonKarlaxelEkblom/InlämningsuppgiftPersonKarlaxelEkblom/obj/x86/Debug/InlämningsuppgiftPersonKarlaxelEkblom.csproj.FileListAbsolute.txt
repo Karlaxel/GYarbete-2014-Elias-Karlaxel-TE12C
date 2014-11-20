@@ -1,0 +1,7 @@
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\bin\Debug\InlämningsuppgiftPersonKarlaxelEkblom.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\bin\Debug\InlämningsuppgiftPersonKarlaxelEkblom.pdb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\obj\x86\Debug\InlämningsuppgiftPersonKarlaxelEkblom.Form1.resources
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\obj\x86\Debug\InlämningsuppgiftPersonKarlaxelEkblom.Properties.Resources.resources
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\obj\x86\Debug\InlämningsuppgiftPersonKarlaxelEkblom.csproj.GenerateResource.Cache
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\obj\x86\Debug\InlämningsuppgiftPersonKarlaxelEkblom.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\InlämningsuppgiftPersonKarlaxelEkblom\InlämningsuppgiftPersonKarlaxelEkblom\obj\x86\Debug\InlämningsuppgiftPersonKarlaxelEkblom.pdb

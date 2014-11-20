@@ -6,3 +6,4 @@ C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelElia
 C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\obj\x86\Debug\GYArbete2014KarlaxelEliasTE12C.pdb
 C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\gytest.xnb
 C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\persontest.xnb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Fysikformelfont.xnb
