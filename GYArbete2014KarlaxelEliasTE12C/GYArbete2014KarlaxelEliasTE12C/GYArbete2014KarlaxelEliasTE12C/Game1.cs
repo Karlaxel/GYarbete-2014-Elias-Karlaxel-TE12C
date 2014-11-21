@@ -13,13 +13,13 @@ using Microsoft.Xna.Framework.Media;
 namespace GYArbete2014KarlaxelEliasTE12C
 {
     /// <summary>
-    /// This is the main type for your game
+    /// This is the main type for your game 
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-       // Point skullballFrameSize = new Point(75, 75);
+       
        
         // texturer
         Texture2D basketboll;
