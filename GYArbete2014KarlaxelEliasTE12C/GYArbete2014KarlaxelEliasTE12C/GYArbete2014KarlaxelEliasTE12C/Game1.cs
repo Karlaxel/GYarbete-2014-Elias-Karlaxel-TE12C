@@ -28,10 +28,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
         public Vector2 posB = new Vector2(0, 650);
         float tid = 0;
         Personer person;
-        double vinkel;
+        double vinkel1;
+        double vinkel2;
         SpriteFont Fysikformel;
         public int counter;
-
+        int sekunder = 0;
 
         //postioner för spritefronts 
         Vector2 FysikformelPos;
@@ -69,7 +70,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             // Create a new SpriteBatch, which can be used to draw textures.
             // person blir instanserad
-            person = new Personer(75,"",18,45,Content.Load<Texture2D>("persontest") ,1,1);
+            person = new Personer(75,"",18,Math.PI/4,Content.Load<Texture2D>("persontest") ,1,1);
             
             spriteBatch = new SpriteBatch(GraphicsDevice); 
             
@@ -79,7 +80,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
            
             // spritefont blir instanserade 
             Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
-            FysikformelPos.X = 550;
+            FysikformelPos.X = 450;
             FysikformelPos.Y = 700;
             // TODO: use this.Content to load your game content here
         }
@@ -107,7 +108,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
            
             // TODO: Add your update logic here
             
-            vinkel = Math.Sin(person.vinkelPåKast);
+            vinkel1 = Math.Sin(person.vinkelPåKast);
+            vinkel2 = Math.Cos(person.vinkelPåKast);
+
             KeyboardState KeyboardState = Keyboard.GetState();
 
              if (KeyboardState.IsKeyDown(Keys.Enter))
@@ -116,21 +119,26 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             if (counter % 2 == 1)
             {
-                boll.posB.Y = (float)(650f - person.hastighet * vinkel * tid + 0.5f * 9.82f * tid * tid);
-                tid += 0.01666667f;
-                boll.posB.X = person.hastighet * tid;
+                boll.posB.Y = (float)(650f - person.hastighet * vinkel1 * tid + 0.5f * 9.82f * tid * tid);
+                
+                boll.posB.X = (float)(person.hastighet * vinkel2 * tid);
+                tid += 0.01666667f * 3;
+                if (boll.posB.Y > 700f || boll.posB.X > 1300f)
+                {
+                    counter = 0;
+                }
             }
 
-            if (person.vinkelPåKast < 20 || person.vinkelPåKast > 180)
+            if (person.vinkelPåKast < Math.PI/6 || person.vinkelPåKast > Math.PI)
             {
-                if (person.vinkelPåKast < 20)
-                    person.vinkelPåKast = 20;
-          else if (person.vinkelPåKast > 180)
-                    person.vinkelPåKast = 180;
+                if (person.vinkelPåKast < Math.PI / 6)
+                    person.vinkelPåKast = Math.PI / 6;
+                else if (person.vinkelPåKast > Math.PI)
+                    person.vinkelPåKast = Math.PI;
             }
 
 
-            if (boll.posB.Y > 700f)
+            if (boll.posB.Y > 700f || boll.posB.X > 1300f)
             {
                 boll.posB.Y = 650f;
                 boll.posB.X = 0;
@@ -151,6 +159,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.vinkelPåKast -= 1;
             }
 
+            sekunder = Convert.ToInt32(tid) / 3;
 
             // ritar ut fonts 
            // spriteBatch.DrawString(Fysikformel,"hej", FysikformelPos, Color.Green);
@@ -176,8 +185,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             spriteBatch.Begin();
             boll.Draw(spriteBatch);
-        
-            spriteBatch.DrawString(Fysikformel,"hojden =_" + "Hastighet" + "_" + person.hastighet + "*" + "sin"  + person.vinkelPåKast.ToString() + "-" + "0,50 * 9.82" + "*" + tid.ToString() , FysikformelPos, Color.Green);
+
+            spriteBatch.DrawString(Fysikformel, "Height = " + person.hastighet + " * " + "sin " + person.vinkelPåKast.ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString(), FysikformelPos, Color.Black);
          
             
             
