@@ -123,25 +123,22 @@ namespace GYArbete2014KarlaxelEliasTE12C
                 
                 boll.posB.X = (float)(person.hastighet * vinkel2 * tid);
                 tid += 0.01666667f * 3;
-                if (boll.posB.Y > 700f || boll.posB.X > 1300f)
-                {
-                    counter = 0;
-                }
+                
             }
 
-            if (person.vinkelPåKast < Math.PI/6 || person.vinkelPåKast > Math.PI)
-            {
-                if (person.vinkelPåKast < Math.PI / 6)
-                    person.vinkelPåKast = Math.PI / 6;
-                else if (person.vinkelPåKast > Math.PI)
-                    person.vinkelPåKast = Math.PI;
-            }
+            
+                if (person.vinkelPåKast < 0)
+                    person.vinkelPåKast = 0;
+                else if (person.vinkelPåKast > Math.PI / 2)
+                    person.vinkelPåKast = Math.PI / 2;
+            
 
 
             if (boll.posB.Y > 700f || boll.posB.X > 1300f)
             {
                 boll.posB.Y = 650f;
                 boll.posB.X = 0;
+                counter = 0;
             }
 
             
@@ -154,9 +151,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
                 if (KeyboardState.IsKeyDown(Keys.Right))
                     person.hastighet += 1;
                 if (KeyboardState.IsKeyDown(Keys.Up))
-                    person.vinkelPåKast += 1;
+                    person.vinkelPåKast += Math.PI / 180;
                 if (KeyboardState.IsKeyDown(Keys.Down))
-                    person.vinkelPåKast -= 1;
+                    person.vinkelPåKast -= Math.PI / 180;
             }
 
             sekunder = Convert.ToInt32(tid) / 3;
@@ -185,8 +182,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             spriteBatch.Begin();
             boll.Draw(spriteBatch);
-
-            spriteBatch.DrawString(Fysikformel, "Height = " + person.hastighet + " * " + "sin " + person.vinkelPåKast.ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString(), FysikformelPos, Color.Black);
+            int hastighetdisplay = Convert.ToInt32(person.hastighet / 3);
+            
+            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString(), FysikformelPos, Color.Black);
          
             
             
