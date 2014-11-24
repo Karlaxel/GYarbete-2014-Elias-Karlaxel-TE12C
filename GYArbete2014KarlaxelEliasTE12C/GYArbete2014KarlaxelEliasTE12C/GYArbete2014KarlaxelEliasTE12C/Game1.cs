@@ -25,17 +25,28 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Texture2D basketboll;
         Texture2D texturFörPerson;
         Basketboll boll;
+        
         public Vector2 posB = new Vector2(0, 650);
         float tid = 0;
         Personer person;
         double vinkel1;
         double vinkel2;
+       
+        // spritefonts variabler
         SpriteFont Fysikformel;
+        SpriteFont Xposition;
+        SpriteFont Yposition;
+        
         public int counter;
         int sekunder = 0;
+       
 
         //postioner för spritefronts 
         Vector2 FysikformelPos;
+        Vector2 XpositionPos;
+        Vector2 YpositionPos;
+
+
 
         public Game1()
         {
@@ -82,6 +93,14 @@ namespace GYArbete2014KarlaxelEliasTE12C
             Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
             FysikformelPos.X = 450;
             FysikformelPos.Y = 700;
+            
+            Xposition = Content.Load<SpriteFont>("Xposition");
+            XpositionPos.X = 850;
+            XpositionPos.Y = 650;
+
+            Yposition = Content.Load<SpriteFont>("Yposition");
+            YpositionPos.X = 850;
+            YpositionPos.Y = 700;
             // TODO: use this.Content to load your game content here
         }
 
@@ -113,8 +132,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
 
             KeyboardState KeyboardState = Keyboard.GetState();
 
-             if (KeyboardState.IsKeyDown(Keys.Enter))
-                counter++; 
+            if (KeyboardState.IsKeyDown(Keys.Enter))
+                counter += counter + 1;
+               
             
             
             if (counter % 2 == 1)
@@ -185,7 +205,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
             int hastighetdisplay = Convert.ToInt32(person.hastighet / 3);
             
             spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString(), FysikformelPos, Color.Black);
-         
+            spriteBatch.DrawString(Xposition, "X position for basketbollen" + boll.posB.X, XpositionPos, Color.Green);
+            spriteBatch.DrawString(Yposition, "Y position For Basketboll" + "" + boll.posB.Y / 100, YpositionPos,  Color.Green);
             
             
             spriteBatch.End();

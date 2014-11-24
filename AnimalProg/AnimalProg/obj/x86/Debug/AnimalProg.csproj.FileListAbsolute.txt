@@ -1,0 +1,7 @@
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\bin\Debug\AnimalProg.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\bin\Debug\AnimalProg.pdb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\obj\x86\Debug\AnimalProg.Form1.resources
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\obj\x86\Debug\AnimalProg.Properties.Resources.resources
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\obj\x86\Debug\AnimalProg.csproj.GenerateResource.Cache
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\obj\x86\Debug\AnimalProg.exe
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\AnimalProg\AnimalProg\obj\x86\Debug\AnimalProg.pdb
