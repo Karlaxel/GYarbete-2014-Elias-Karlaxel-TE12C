@@ -154,7 +154,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
 
 
-            if (boll.posB.Y > 700f || boll.posB.X > 1300f)
+            if (boll.posB.Y > 650f || boll.posB.X > 1300f)
             {
                 boll.posB.Y = 650f;
                 boll.posB.X = 0;
@@ -176,7 +176,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.vinkelPåKast -= Math.PI / 180;
             }
 
-            sekunder = Convert.ToInt32(tid) / 3;
+            sekunder = Convert.ToInt32(tid);
 
             // ritar ut fonts 
            // spriteBatch.DrawString(Fysikformel,"hej", FysikformelPos, Color.Green);
@@ -202,11 +202,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             spriteBatch.Begin();
             boll.Draw(spriteBatch);
-            int hastighetdisplay = Convert.ToInt32(person.hastighet / 3);
-            int bollX = Convert.ToInt32(boll.posB.X / 3);
-            int bollY = Convert.ToInt32((650 - boll.posB.Y) / 3);
+            int hastighetdisplay = Convert.ToInt32(person.hastighet);
+            int bollX = Convert.ToInt32(boll.posB.X);
+            int bollY = Convert.ToInt32(650 - boll.posB.Y);
             
-            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString(), FysikformelPos, Color.Black);
+            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString() + " (3 x Speed)", FysikformelPos, Color.Black);
             spriteBatch.DrawString(Xposition, "X position for Basketbollen = " + bollX, XpositionPos, Color.Black);
             spriteBatch.DrawString(Yposition, "Y position For Basketboll = " + bollY, YpositionPos,  Color.Black);
             
