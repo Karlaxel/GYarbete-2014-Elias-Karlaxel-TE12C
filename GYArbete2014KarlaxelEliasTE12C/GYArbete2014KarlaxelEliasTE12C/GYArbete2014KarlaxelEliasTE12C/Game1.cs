@@ -26,13 +26,14 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Texture2D texturFörPerson;
         Basketboll boll;
         Texture2D Bakgrund;
+        Texture2D textuförbasketlinjefunktion;
         
-        public Vector2 posB = new Vector2(0, 650);
+        public Vector2 posB = new Vector2(40, 650);
         float tid = 0;
         Personer person;
         double vinkel1;
         double vinkel2;
-       
+        int tidmätare = 1;
         // spritefonts variabler
         SpriteFont Fysikformel;
         SpriteFont Xposition;
@@ -48,7 +49,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Vector2 YpositionPos;
         Vector2 BakgroundPos;
         Vector2 infoPos;
-
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -87,6 +88,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             spriteBatch = new SpriteBatch(GraphicsDevice); 
            
             // boll blir instanserad
+            textuförbasketlinjefunktion = Content.Load<Texture2D>("basketballAndragradare");
             basketboll = Content.Load<Texture2D>("basketball");
             boll = new Basketboll(posB, basketboll);
            
@@ -96,11 +98,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
             FysikformelPos.Y = 650;
               
             Xposition = Content.Load<SpriteFont>("Xposition");
-            XpositionPos.X = 1000;
+            XpositionPos.X = 900;
             XpositionPos.Y = 50;
 
             Yposition = Content.Load<SpriteFont>("Yposition");
-            YpositionPos.X = 1000;
+            YpositionPos.X = 900;
             YpositionPos.Y = 100;
 
             info = Content.Load<SpriteFont>("info");
@@ -151,7 +153,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
 
             if (KeyboardState.IsKeyDown(Keys.Space))
             {
-                boll.posB.X = 0;
+                boll.posB.X = 40;
                 boll.posB.Y = 650;
                 tid = 0;
                 counter = 0;
@@ -177,7 +179,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.hastighet = 125;
 
             
-
+             
             
             
            
@@ -217,17 +219,27 @@ namespace GYArbete2014KarlaxelEliasTE12C
             //spriteBatch.DrawString(Fysikformel, "hej", FysikformelPos, Color.Green);
             //person.vinkelPåKast.ToString()
             
+      
+
+            
             spriteBatch.Begin();
            
             int hastighetdisplay = Convert.ToInt32(person.hastighet);
             int bollX = Convert.ToInt32(boll.posB.X);
             int bollY = Convert.ToInt32(650 - boll.posB.Y);
             int vinkeldisplay = Convert.ToInt32(person.vinkelPåKast * 180 / Math.PI);
+
+            if (1 == 1)
+            {
+                spriteBatch.Draw(textuförbasketlinjefunktion, posB, Color.White);
+                tidmätare++;
+            }
+            
             spriteBatch.Draw(Bakgrund, BakgroundPos, Color.White);
-            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + vinkeldisplay.ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString() + " (3 x Speed)", FysikformelPos, Color.Black);
-            spriteBatch.DrawString(Xposition, "X position for Basketbollen = " + bollX, XpositionPos, Color.Black);
-            spriteBatch.DrawString(Yposition, "Y position For Basketboll = " + bollY, YpositionPos,  Color.Black);
-            spriteBatch.DrawString(info, "Tryck Enter for att starta och Space for att borja om", infoPos, Color.Black);
+            spriteBatch.DrawString(Fysikformel, "Height in Meters = " + hastighetdisplay + "m/s" + " * " + "sin " + vinkeldisplay.ToString() + " -" + " 1/2 * 9.82 " + "* " + sekunder.ToString() + "s" + " * " + sekunder.ToString() + "s" + " (3 x Speed)", FysikformelPos, Color.Black);
+            spriteBatch.DrawString(Xposition, "X Position For Basketboll in Meters = " + bollX, XpositionPos, Color.Black);
+            spriteBatch.DrawString(Yposition, "Y position For Basketboll in Meters = " + bollY, YpositionPos,  Color.Black);
+            spriteBatch.DrawString(info, "Press Enter to start and space to Restart", infoPos, Color.Black);
             boll.Draw(spriteBatch);
             spriteBatch.End();
 

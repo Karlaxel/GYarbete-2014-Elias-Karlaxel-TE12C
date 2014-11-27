@@ -34,3 +34,5 @@ C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelElia
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\background.xnb
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\basketball.xnb
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\info.xnb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\info.xnb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\basketballAndragradare.xnb
