@@ -1,7 +1,8 @@
 Content\gytest.xnb
 Content\persontest.xnb
+Content\background.xnb
+Content\basketball.xnb
 Content\Fysikformelfont.xnb
 Content\Xposition.xnb
 Content\Yposition.xnb
-Content\background.xnb
-Content\basketball.xnb
+Content\info.xnb

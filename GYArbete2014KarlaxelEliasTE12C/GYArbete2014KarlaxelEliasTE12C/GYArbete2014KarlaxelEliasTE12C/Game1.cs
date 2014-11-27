@@ -37,7 +37,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         SpriteFont Fysikformel;
         SpriteFont Xposition;
         SpriteFont Yposition;
-        
+        SpriteFont info;
         public int counter = 0;
         int sekunder = 0;
        
@@ -47,7 +47,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Vector2 XpositionPos;
         Vector2 YpositionPos;
         Vector2 BakgroundPos;
-
+        Vector2 infoPos;
 
         public Game1()
         {
@@ -92,7 +92,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
            
             // spritefont blir instanserade 
             Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
-            FysikformelPos.X = 450;
+            FysikformelPos.X = 400;
             FysikformelPos.Y = 650;
               
             Xposition = Content.Load<SpriteFont>("Xposition");
@@ -102,6 +102,10 @@ namespace GYArbete2014KarlaxelEliasTE12C
             Yposition = Content.Load<SpriteFont>("Yposition");
             YpositionPos.X = 1000;
             YpositionPos.Y = 100;
+
+            info = Content.Load<SpriteFont>("info");
+            infoPos.X = 50;
+            infoPos.Y = 50;
             // TODO: use this.Content to load your game content here
             
             //texturer blir deklarade 
@@ -145,9 +149,15 @@ namespace GYArbete2014KarlaxelEliasTE12C
                 counter = 5;  
             }
 
+            if (KeyboardState.IsKeyDown(Keys.Space))
+            {
+                boll.posB.X = 0;
+                boll.posB.Y = 650;
+                tid = 0;
+                counter = 0;
+            }
 
-
-            if (counter % 2 == 1 && boll.posB.Y <= 650f && boll.posB.X < 1300f)
+            if (counter % 2 == 1 && boll.posB.Y <= 650f && boll.posB.X < 1350f && boll.posB.Y > 0)
             {
                 boll.posB.Y = (float)(650f - person.hastighet * vinkel1 * tid + 0.5f * 9.82f * tid * tid);
                 
@@ -161,8 +171,10 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.vinkelPåKast = 0;
                 else if (person.vinkelPåKast > Math.PI / 2)
                     person.vinkelPåKast = Math.PI / 2;
-            
-
+                if (person.hastighet < 0)
+                    person.hastighet = 0;
+                else if (person.hastighet > 125)
+                    person.hastighet = 125;
 
             
 
@@ -210,11 +222,12 @@ namespace GYArbete2014KarlaxelEliasTE12C
             int hastighetdisplay = Convert.ToInt32(person.hastighet);
             int bollX = Convert.ToInt32(boll.posB.X);
             int bollY = Convert.ToInt32(650 - boll.posB.Y);
+            int vinkeldisplay = Convert.ToInt32(person.vinkelPåKast * 180 / Math.PI);
             spriteBatch.Draw(Bakgrund, BakgroundPos, Color.White);
-            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString() + " (3 x Speed)", FysikformelPos, Color.Black);
+            spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + vinkeldisplay.ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString() + " (3 x Speed)", FysikformelPos, Color.Black);
             spriteBatch.DrawString(Xposition, "X position for Basketbollen = " + bollX, XpositionPos, Color.Black);
             spriteBatch.DrawString(Yposition, "Y position For Basketboll = " + bollY, YpositionPos,  Color.Black);
-            
+            spriteBatch.DrawString(info, "Tryck Enter for att starta och Space for att borja om", infoPos, Color.Black);
             boll.Draw(spriteBatch);
             spriteBatch.End();
 
