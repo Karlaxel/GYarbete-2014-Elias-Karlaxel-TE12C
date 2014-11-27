@@ -36,7 +36,6 @@ namespace GYArbete2014KarlaxelEliasTE12C
             spritebatch.Draw(texturFörBasketBoll,posB, Color.White);
         }
 
-     
-
+        
     }
 }
