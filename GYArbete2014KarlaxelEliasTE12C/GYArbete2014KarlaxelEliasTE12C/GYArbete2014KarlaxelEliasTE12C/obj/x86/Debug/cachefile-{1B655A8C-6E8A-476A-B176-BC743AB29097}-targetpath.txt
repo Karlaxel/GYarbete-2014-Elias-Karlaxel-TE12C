@@ -2,8 +2,8 @@ Content\gytest.xnb
 Content\persontest.xnb
 Content\background.xnb
 Content\basketball.xnb
+Content\basketballAndragradare.xnb
 Content\Fysikformelfont.xnb
 Content\Xposition.xnb
 Content\Yposition.xnb
 Content\info.xnb
-Content\basketballAndragradare.xnb
