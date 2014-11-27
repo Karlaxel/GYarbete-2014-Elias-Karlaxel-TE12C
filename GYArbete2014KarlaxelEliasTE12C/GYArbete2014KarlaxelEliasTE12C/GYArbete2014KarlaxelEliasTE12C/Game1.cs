@@ -25,6 +25,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Texture2D basketboll;
         Texture2D texturFörPerson;
         Basketboll boll;
+        Texture2D Bakgrund;
         
         public Vector2 posB = new Vector2(0, 650);
         float tid = 0;
@@ -37,7 +38,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
         SpriteFont Xposition;
         SpriteFont Yposition;
         
-        public int counter;
+        public int counter = 0;
         int sekunder = 0;
        
 
@@ -45,14 +46,14 @@ namespace GYArbete2014KarlaxelEliasTE12C
         Vector2 FysikformelPos;
         Vector2 XpositionPos;
         Vector2 YpositionPos;
-
+        Vector2 BakgroundPos;
 
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferHeight = 700;
             graphics.PreferredBackBufferWidth = 1400;
 
         }
@@ -84,16 +85,16 @@ namespace GYArbete2014KarlaxelEliasTE12C
             person = new Personer(75,"",18,Math.PI/4,Content.Load<Texture2D>("persontest") ,1,1);
             
             spriteBatch = new SpriteBatch(GraphicsDevice); 
-            
+           
             // boll blir instanserad
-            basketboll = Content.Load<Texture2D>("gytest");
+            basketboll = Content.Load<Texture2D>("basketball");
             boll = new Basketboll(posB, basketboll);
            
             // spritefont blir instanserade 
             Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
             FysikformelPos.X = 450;
-            FysikformelPos.Y = 700;
-            
+            FysikformelPos.Y = 650;
+              
             Xposition = Content.Load<SpriteFont>("Xposition");
             XpositionPos.X = 1000;
             XpositionPos.Y = 50;
@@ -102,6 +103,11 @@ namespace GYArbete2014KarlaxelEliasTE12C
             YpositionPos.X = 1000;
             YpositionPos.Y = 100;
             // TODO: use this.Content to load your game content here
+            
+            //texturer blir deklarade 
+            Bakgrund = Content.Load<Texture2D>("background");
+            BakgroundPos.X = 0;
+            BakgroundPos.Y = 0;
         }
 
 
@@ -134,10 +140,14 @@ namespace GYArbete2014KarlaxelEliasTE12C
 
             if (KeyboardState.IsKeyDown(Keys.Enter))
                 counter += counter + 1;
-               
-            
-            
-            if (counter % 2 == 1)
+            if (counter > 20)
+            {
+                counter = 5;  
+            }
+
+
+
+            if (counter % 2 == 1 && boll.posB.Y <= 650f && boll.posB.X < 1300f)
             {
                 boll.posB.Y = (float)(650f - person.hastighet * vinkel1 * tid + 0.5f * 9.82f * tid * tid);
                 
@@ -154,12 +164,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
 
 
-            if (boll.posB.Y > 650f || boll.posB.X > 1300f)
-            {
-                boll.posB.Y = 650f;
-                boll.posB.X = 0;
-                counter = 0;
-            }
+            
 
             
             
@@ -201,16 +206,16 @@ namespace GYArbete2014KarlaxelEliasTE12C
             //person.vinkelPåKast.ToString()
             
             spriteBatch.Begin();
-            boll.Draw(spriteBatch);
+           
             int hastighetdisplay = Convert.ToInt32(person.hastighet);
             int bollX = Convert.ToInt32(boll.posB.X);
             int bollY = Convert.ToInt32(650 - boll.posB.Y);
-            
+            spriteBatch.Draw(Bakgrund, BakgroundPos, Color.White);
             spriteBatch.DrawString(Fysikformel, "Height = " + hastighetdisplay + " * " + "sin " + (person.vinkelPåKast * 180 / Math.PI).ToString() + " -" + " 0,50 * 9.82 " + "* " + sekunder.ToString() + " * " + sekunder.ToString() + " (3 x Speed)", FysikformelPos, Color.Black);
             spriteBatch.DrawString(Xposition, "X position for Basketbollen = " + bollX, XpositionPos, Color.Black);
             spriteBatch.DrawString(Yposition, "Y position For Basketboll = " + bollY, YpositionPos,  Color.Black);
             
-            
+            boll.Draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

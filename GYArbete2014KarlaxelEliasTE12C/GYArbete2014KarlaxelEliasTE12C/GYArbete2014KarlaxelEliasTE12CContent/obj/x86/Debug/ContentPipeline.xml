@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\gytest.xnb</Output>
-      <Time>2014-11-26T11:49:22.0949066+01:00</Time>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\gytest.xnb</Output>
+      <Time>2014-10-23T14:23:48.1942327+02:00</Time>
     </Item>
     <Item>
       <Source>persontest.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\persontest.xnb</Output>
-      <Time>2014-11-26T11:49:22.1039071+01:00</Time>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\persontest.xnb</Output>
+      <Time>2014-11-13T14:42:19.0242707+01:00</Time>
     </Item>
     <Item>
       <Source>Fysikformelfont.spritefont</Source>
@@ -25,8 +25,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Fysikformelfont.xnb</Output>
-      <Time>2014-11-26T11:49:22.0919064+01:00</Time>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Fysikformelfont.xnb</Output>
+      <Time>2014-11-20T14:44:32.8008444+01:00</Time>
     </Item>
     <Item>
       <Source>Xposition.spritefont</Source>
@@ -34,8 +34,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Xposition.xnb</Output>
-      <Time>2014-11-26T11:49:22.0939066+01:00</Time>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Xposition.xnb</Output>
+      <Time>2014-11-24T19:25:30.2893198+01:00</Time>
     </Item>
     <Item>
       <Source>Yposition.spritefont</Source>
@@ -43,8 +43,26 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Yposition.xnb</Output>
-      <Time>2014-11-26T11:49:22.0949066+01:00</Time>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\Yposition.xnb</Output>
+      <Time>2014-11-24T19:27:02.8036113+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2014-11-27T14:33:05.7638517+01:00</Time>
+    </Item>
+    <Item>
+      <Source>basketball.png</Source>
+      <Name>basketball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\basketball.xnb</Output>
+      <Time>2014-11-27T15:15:12.9663994+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -52,10 +70,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12CContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12CContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12CContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12CContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

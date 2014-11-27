@@ -7,5 +7,17 @@ namespace HumantalkKarlaxelEkblomTE12C
 {
     class Spanish:Human
     {
+
+        public Spanish(string namn)
+        {
+            this.namn = namn;
+        }
+
+        public string Talk()
+        {
+            return "holla espaniol =)";
+        }
+       
+
     }
 }

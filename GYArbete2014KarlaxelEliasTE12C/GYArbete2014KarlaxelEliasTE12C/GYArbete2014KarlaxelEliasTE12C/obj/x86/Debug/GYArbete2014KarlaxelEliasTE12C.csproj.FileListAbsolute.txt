@@ -29,3 +29,5 @@ C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEl
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\obj\x86\Debug\GYArbete2014KarlaxelEliasTE12C.exe
 C:\Users\nti\Documents\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\obj\x86\Debug\GYArbete2014KarlaxelEliasTE12C.pdb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\background.xnb
+C:\Users\nti\Desktop\GYarbete-2014-Elias-Karlaxel-TE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\GYArbete2014KarlaxelEliasTE12C\bin\x86\Debug\Content\basketball.xnb

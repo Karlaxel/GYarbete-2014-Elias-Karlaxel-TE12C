@@ -18,6 +18,11 @@ namespace HumantalkKarlaxelEkblomTE12C
 
         private void button1_Click(object sender, EventArgs e)
         {
+        Swedish svensk = new Swedish("Bengt");
+        Spanish spanish = new Spanish("i dont know");
+        English englishmen = new English("Jack");
+
+        richTextBox1.AppendText(svensk + Swedish.
 
         }
     }

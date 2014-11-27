@@ -7,8 +7,8 @@ namespace HumantalkKarlaxelEkblomTE12C
 {
     abstract class Human
     {
-        string name;
-        
-    
+        public Human() { }
+
+        protected string namn;
     }
 }
