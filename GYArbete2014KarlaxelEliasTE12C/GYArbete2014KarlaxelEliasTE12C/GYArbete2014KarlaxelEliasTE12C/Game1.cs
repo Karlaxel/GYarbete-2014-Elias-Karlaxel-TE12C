@@ -94,7 +94,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
            
             // spritefont blir instanserade 
             Fysikformel = Content.Load<SpriteFont>("Fysikformelfont");
-            FysikformelPos.X = 275;
+            FysikformelPos.X = 240;
             FysikformelPos.Y = 650;
               
             Xposition = Content.Load<SpriteFont>("Xposition");
@@ -236,7 +236,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             }
             
             spriteBatch.Draw(Bakgrund, BakgroundPos, Color.White);
-            spriteBatch.DrawString(Fysikformel, "Height in Meters = " + hastighetdisplay + " m/s" + " * " + "sin (" + vinkeldisplay.ToString() + " degrees) -" + " 1/2 * 9.82 " + "* " + sekunder.ToString() + "s" + " * " + sekunder.ToString() + "s" + " (3 x Speed)", FysikformelPos, Color.Black);
+            spriteBatch.DrawString(Fysikformel, "Height in Meters = " + hastighetdisplay + " m/s" + " * " + "sin (" + vinkeldisplay.ToString() + " degrees) * " + sekunder.ToString() + "s -" + " 1/2 * 9.82 " + "* " + sekunder.ToString() + "s" + " * " + sekunder.ToString() + "s" + " (3 x Speed)", FysikformelPos, Color.Black);
             spriteBatch.DrawString(Xposition, "X Position For Basketboll in Meters = " + bollX, XpositionPos, Color.Black);
             spriteBatch.DrawString(Yposition, "Y position For Basketboll in Meters = " + bollY, YpositionPos,  Color.Black);
             spriteBatch.DrawString(info, "Press Enter to start and space to Restart", infoPos, Color.Black);
