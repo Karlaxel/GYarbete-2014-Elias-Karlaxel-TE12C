@@ -23,7 +23,6 @@ namespace GYArbete2014KarlaxelEliasTE12C
        
         // texturer
         Texture2D basketboll;
-        Texture2D texturFörPerson;
         Basketboll boll;
         Texture2D Bakgrund;
         Texture2D textuförbasketlinjefunktion;
@@ -164,7 +163,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
                 boll.posB.Y = (float)(650f - person.hastighet * vinkel1 * tid + 0.5f * 9.82f * tid * tid);
                 
                 boll.posB.X = (float)(40 + person.hastighet * vinkel2 * tid);
-                tid += 0.01666667f * 3;
+                tid += 0.01666667f * 5;
                 
             }
 
@@ -175,8 +174,8 @@ namespace GYArbete2014KarlaxelEliasTE12C
                     person.vinkelPåKast = Math.PI / 2;
                 if (person.hastighet < 0)
                     person.hastighet = 0;
-                else if (person.hastighet > 125)
-                    person.hastighet = 125;
+                else if (person.hastighet > 200)
+                    person.hastighet = 200;
 
             
              
@@ -224,9 +223,9 @@ namespace GYArbete2014KarlaxelEliasTE12C
             
             spriteBatch.Begin();
            
-            int hastighetdisplay = Convert.ToInt32(person.hastighet);
-            int bollX = Convert.ToInt32(boll.posB.X - 40);
-            int bollY = Convert.ToInt32(650 - boll.posB.Y);
+            int hastighetdisplay = Convert.ToInt32(person.hastighet/5);
+            int bollX = Convert.ToInt32((boll.posB.X - 40)/25);
+            int bollY = Convert.ToInt32((650 - boll.posB.Y)/25);
             int vinkeldisplay = Convert.ToInt32(person.vinkelPåKast * 180 / Math.PI);
 
             if (1 == 1)
@@ -236,7 +235,7 @@ namespace GYArbete2014KarlaxelEliasTE12C
             }
             
             spriteBatch.Draw(Bakgrund, BakgroundPos, Color.White);
-            spriteBatch.DrawString(Fysikformel, "Height in Meters = " + hastighetdisplay + " m/s" + " * " + "sin (" + vinkeldisplay.ToString() + " degrees) * " + sekunder.ToString() + "s -" + " 1/2 * 9.82 " + "* " + sekunder.ToString() + "s" + " * " + sekunder.ToString() + "s" + " (3 x Speed)", FysikformelPos, Color.Black);
+            spriteBatch.DrawString(Fysikformel, "Height in Meters = " + hastighetdisplay + " m/s" + " * " + "sin (" + vinkeldisplay.ToString() + " degrees) * " + (sekunder/5).ToString() + "s -" + " 1/2 * 9.82 " + "* " + (sekunder/5).ToString() + "s" + " * " + (sekunder/5).ToString() + "s", FysikformelPos, Color.Black);
             spriteBatch.DrawString(Xposition, "X Position For Basketboll in Meters = " + bollX, XpositionPos, Color.Black);
             spriteBatch.DrawString(Yposition, "Y position For Basketboll in Meters = " + bollY, YpositionPos,  Color.Black);
             spriteBatch.DrawString(info, "Press Enter to start and space to Restart", infoPos, Color.Black);
